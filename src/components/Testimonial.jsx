@@ -51,7 +51,7 @@ const StarRating = ({ count }) => {
 
 export default function TestimonialsMarquee() {
   return (
-    <section className="bg-white dark:bg-gray-900 py-24 overflow-hidden">
+    <section className="bg-gradient-to-r from-blueviolet-100 via-yellow-200 to-pink-100 py-24 overflow-hidden">
       <div className="container mx-auto max-w-7xl px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           What Our Clients Say
@@ -74,7 +74,7 @@ export default function TestimonialsMarquee() {
               ({ id, name, role, school, feedback, rating }, i) => (
                 <div
                   key={`${id}-${i}`}
-                  className=" min-w-[300px] md:min-w-[420px] bg-gray-100 dark:bg-gray-800 rounded-3xl p-8 shadow-lg flex flex-col justify-between cursor-pointer"
+                  className=" min-w-[300px] md:min-w-[420px] bg-white/70  rounded-3xl p-8 shadow-lg flex flex-col justify-between cursor-pointer"
                 >
                   <p className="text-gray-800 dark:text-gray-200 italic leading-relaxed">
                     “{feedback}”

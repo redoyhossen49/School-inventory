@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link
           to="#"
           style={{ textShadow: "3px 3px 5px yellow" }}
-          className="text-3xl md:text-4xl font-extrabold text-indigo-500 hover:text-indigo-700 transition"
+          className="text-3xl md:text-4xl font-extrabold hover:scale-110 transition"
         >
           <span className="text-indigo-700">📚 Edu</span>
           <span className="text-gray-200">Stock</span>
@@ -83,8 +83,8 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-indigo-600 font-semibold"
-                    : "text-gray-600 hover:text-indigo-500"
+                    ? "text-[#880000] font-semibold"
+                    : "text-white hover:text-[#550000]"
                 }
               >
                 {item.name}
@@ -94,7 +94,7 @@ const Navbar = () => {
             <Link
               to="/login"
               onClick={() => setMenuOpen(false)}
-              className="mt-4 flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2 text-white font-semibold hover:bg-indigo-700 transition"
+              className="mt-4 flex items-center gap-2 rounded-lg bg-[#880000] hover:bg-[#550000] px-5 py-2 text-white font-semibold  transition"
             >
               <CiLogin />
               Login

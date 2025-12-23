@@ -105,7 +105,7 @@ export default function Works() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-indigo-600 bg-opacity-40 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center hover:scale-105 hover:text-red-400 transition"
+              className="bg-gray-600 bg-opacity-40 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center hover:scale-105 hover:text-red-400 transition"
             >
               <div className="mb-5">{icon}</div>
               <h3 className="text-xl font-semibold mb-3">{title}</h3>

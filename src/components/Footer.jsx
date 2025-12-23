@@ -105,8 +105,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm select-none">
-          &copy; {new Date().getFullYear()} SchoolInventory. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} EduStock. All rights reserved.
         </div>
       </div>
     </footer>

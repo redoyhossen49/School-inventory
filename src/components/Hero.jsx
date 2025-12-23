@@ -24,7 +24,7 @@ export default function Hero() {
               A Smarter Way to <br />
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 <Typewriter
-                  words={["Manage School Inventory"]}
+                  words={["Manage School  Inventory"]}
                   loop
                   cursor
                   cursorStyle="_"
@@ -78,7 +78,7 @@ export default function Hero() {
             }}
             className="relative cursor-pointer"
           >
-            <div className="absolute -top-6 -left-6 h-full w-full rounded-3xl bg-indigo-500/30" />
+            <div className="absolute -top-6 -left-6 h-auto w-auto md:h-full md:w-full rounded-3xl bg-indigo-500/30" />
 
             <img
               src="/images/school-image.jpg"

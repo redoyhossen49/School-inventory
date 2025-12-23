@@ -25,7 +25,7 @@ export default function CTA() {
   };
 
   return (
-    <section className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 py-20">
+    <section className="bg-gradient-to-r from-indigo-100 via-purple-600 to-pink-100 py-20">
       <motion.div
         className="container mx-auto px-6 text-center text-white max-w-3xl"
         variants={containerVariants}
