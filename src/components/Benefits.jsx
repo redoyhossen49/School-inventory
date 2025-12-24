@@ -99,7 +99,10 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="bg-indigo-50 dark:bg-gray-900 py-24 transition-colors duration-500">
+    <section
+      id="benefits"
+      className="bg-indigo-50 dark:bg-gray-900 py-24 transition-colors duration-500 "
+    >
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 dark:text-indigo-400 mb-6">
           Why Choose Our School Inventory System?

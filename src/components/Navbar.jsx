@@ -8,12 +8,28 @@ import { menuContext } from "../Context/MenuProvider";
 const Navbar = () => {
   const { menuOpen, setMenuOpen } = useContext(menuContext);
 
+  const handleScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
+
   const navItems = [
-    { id: 1, name: "Home", path: "/" },
-    { id: 2, name: "About", path: "/about" },
-    { id: 3, name: "Features", path: "/features" },
-    { id: 4, name: "How it Works", path: "/howitWorks" },
-    { id: 5, name: "Contact", path: "/contact" },
+    { id: 1, name: "Home", path: "/", section: "home" },
+
+    { id: 2, name: "Features", path: "/features", section: "features" },
+    { id: 3, name: "About", path: "/about", section: "about" },
+    { id: 4, name: "Works", path: "/works", section: "works" },
+    { id: 5, name: "Benefits", path: "/benefits", section: "benefits" },
+    {
+      id: 6,
+      name: "Testimonials",
+      path: "/testimonials",
+      section: "testimonials",
+    },
+    { id: 7, name: "Contact Us", path: "/contact", section: "contact" },
   ];
 
   return (
@@ -31,22 +47,26 @@ const Navbar = () => {
         </Link>
 
         {/* DESKTOP MENU */}
-        <div className="hidden lg:flex space-x-8 text-lg   font-medium">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.id}
-              to={item.path}
-              className={({ isActive }) =>
-                `transition ${
-                  isActive
-                    ? "text-[#880000] font-semibold"
-                    : "text-white hover:text-[#880000]"
-                }`
-              }
-            >
-              {item.name}
-            </NavLink>
-          ))}
+        <div className="hidden lg:flex space-x-4 text-lg   font-medium">
+          {navItems.map((item) =>
+            item.section ? (
+              <button
+                key={item.id}
+                onClick={() => handleScroll(item.section)}
+                className="text-white hover:text-[#880000] transition"
+              >
+                {item.name}
+              </button>
+            ) : (
+              <NavLink
+                key={item.id}
+                to={item.path}
+                className="text-white hover:text-[#880000]"
+              >
+                {item.name}
+              </NavLink>
+            )
+          )}
         </div>
 
         {/* LOGIN BUTTON */}
@@ -76,20 +96,26 @@ const Navbar = () => {
       {menuOpen && (
         <div className="lg:hidden bg-black/60 backdrop-blur-md border-b border-gray-100">
           <div className="flex flex-col items-center gap-4 py-6 text-sm font-medium">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.id}
-                to={item.path}
-                onClick={() => setMenuOpen(false)}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-[#880000] font-semibold"
-                    : "text-white hover:text-[#550000]"
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
+            {navItems.map((item) =>
+              item.section ? (
+                <button
+                  key={item.id}
+                  onClick={() => handleScroll(item.section)}
+                  className="text-white hover:text-[#550000]"
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <NavLink
+                  key={item.id}
+                  to={item.path}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-white hover:text-[#550000]"
+                >
+                  {item.name}
+                </NavLink>
+              )
+            )}
 
             <Link
               to="/login"

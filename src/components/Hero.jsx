@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
+      id="hero"
       className="relative  w-full py-28 overflow-hidden bg-gradient-to-br from-[#550000] via-[#110000] to-[#000000]
  flex items-center"
     >
-      <div className="absolute top-[-120px] left-[-120px] h-[320px] w-[320px]  " />
+      <div className="absolute top-[-120px] left-[-120px] h-[320px] w-[320px] scroll-mt-28 " />
       <div className="absolute bottom-[-120px] right-[-120px] h-[320px] w-[320px] " />
 
       <div className="relative z-10 container mx-auto px-6">
@@ -21,10 +22,10 @@ export default function Hero() {
             </span>
 
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
-              A Smarter Way to <br />
+              We are the <br />
               <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 <Typewriter
-                  words={["Manage School  Inventory"]}
+                  words={["Top Learning Platform"]}
                   loop
                   cursor
                   cursorStyle="_"
